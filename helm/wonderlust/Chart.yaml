@@ -1,0 +1,18 @@
+apiVersion: v2
+name: wonderlust
+description: Enterprise Helm Chart for Wonderlust Full-Stack MERN Application
+type: application
+version: 1.0.0
+appVersion: "1.0.0"
+icon: https://raw.githubusercontent.com/Kshiteejamude/Wonderlust/main/frontend/public/favicon.ico
+keywords:
+  - wonderlust
+  - react
+  - nodejs
+  - mongodb
+  - redis
+  - devops
+home: https://github.com/mukeshchaudhary14/Wonderlust-
+maintainers:
+  - name: Mukesh Chaudhary
+    email: mukesh.chaudhary.1716@gmail.com

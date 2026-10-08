@@ -1,0 +1,14 @@
+node_modules
+.git
+.github
+.husky
+.idea
+.vscode
+*.log
+trivy-reports
+helm
+k8s
+argocd
+helm-dashboard
+scripts
+*.md

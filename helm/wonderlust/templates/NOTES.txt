@@ -1,0 +1,27 @@
+========================================================================
+🎉 Wonderlust Application Helm Chart Deployed Successfully!
+========================================================================
+
+Release Name: {{ .Release.Name }}
+Namespace:    {{ .Release.Namespace }}
+
+1. Check deployment and pod status:
+   kubectl get pods -n {{ .Release.Namespace }} -l app.kubernetes.io/instance={{ .Release.Name }}
+
+2. Check services:
+   kubectl get svc -n {{ .Release.Namespace }}
+
+3. Access Frontend Service (via port-forward):
+   kubectl port-forward svc/{{ include "wonderlust.fullname" . }}-frontend 3000:{{ .Values.frontend.service.port }} -n {{ .Release.Namespace }}
+   Open: http://localhost:3000
+
+4. Access Backend API Service (via port-forward):
+   kubectl port-forward svc/{{ include "wonderlust.fullname" . }}-backend 5000:{{ .Values.backend.service.port }} -n {{ .Release.Namespace }}
+   Open: http://localhost:5000/
+
+5. If Ingress is enabled:
+   Add entry to /etc/hosts:
+   127.0.0.1 {{ (index .Values.ingress.hosts 0).host }}
+   Open: http://{{ (index .Values.ingress.hosts 0).host }}/
+
+========================================================================

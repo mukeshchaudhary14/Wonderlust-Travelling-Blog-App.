@@ -1,0 +1,21 @@
+scan:
+  scanners:
+    - vuln
+    - secret
+    - config
+
+severity:
+  - HIGH
+  - CRITICAL
+
+vulnerability:
+  ignore-unfixed: true
+
+secret:
+  enable: true
+
+format: table
+exit-code: 0
+timeout: 10m0s
+cache:
+  dir: /root/.cache/trivy
